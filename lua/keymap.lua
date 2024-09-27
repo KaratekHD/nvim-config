@@ -7,3 +7,4 @@ vim.api.nvim_set_keymap('n', '<leader>ga', ':!git add "%"<CR>', { noremap = true
 vim.api.nvim_set_keymap('n', '<leader>gd', ':!git pull<CR>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<leader>gp', ':!git push<CR>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<leader>gc', ':!git commit<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('t', '<C-w>x', "<C-\\><C-n>", { noremap = true, silent = false })
