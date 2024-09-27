@@ -7,4 +7,8 @@ vim.api.nvim_set_keymap('n', '<leader>ga', ':!git add "%"<CR>', { noremap = true
 vim.api.nvim_set_keymap('n', '<leader>gd', ':TermExec direction=float cmd="git pull && sleep .5 && exit" <CR>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<leader>gp', ':TermExec direction=float cmd="git push && sleep .5 && exit" <CR>', { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<leader>gc', ':TermExec direction=float cmd="git commit && exit" <CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<leader>gs', ':TermExec direction=float cmd="git status"<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<C-w>x', "<C-\\><C-n>", { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<leader>tn', ":ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>tf', ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>tt', ":terminal<CR>", { noremap = true, silent = true })
