@@ -14,6 +14,9 @@ call plug#begin()
 	Plug 'hrsh7th/cmp-path'
 	Plug 'hrsh7th/cmp-cmdline'
 	Plug 'hrsh7th/nvim-cmp'
+	Plug 'nvim-lualine/lualine.nvim'
+	" If you want to have icons in your statusline choose one of these
+	Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 
 set number
@@ -25,6 +28,7 @@ lua require('sidebar')
 lua require('lsp')
 lua require('autocomplete')
 lua require('tabs')
+lua require('statusbar')
 lua require('keymap')
 
 lua require("toggleterm").setup()
