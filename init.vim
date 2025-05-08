@@ -17,12 +17,15 @@ call plug#begin()
 	Plug 'nvim-lualine/lualine.nvim'
 	" If you want to have icons in your statusline choose one of these
 	Plug 'nvim-tree/nvim-web-devicons'
+	Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 set number
 set mouse=
 
-colorscheme adwaita
+colorscheme catppuccin
 
 lua require('sidebar')
 lua require('lsp')
@@ -32,3 +35,4 @@ lua require('statusbar')
 lua require('keymap')
 
 lua require("toggleterm").setup()
+lua require("ibl").setup()

@@ -12,3 +12,4 @@ vim.api.nvim_set_keymap('t', '<C-w>x', "<C-\\><C-n>", { noremap = true, silent =
 vim.api.nvim_set_keymap('n', '<leader>tn', ":ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>tf', ":ToggleTerm direction=float<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>tt', ":terminal<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>lp', ":!black %<CR><CR>", { noremap = true, silent = true })
