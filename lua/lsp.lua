@@ -34,4 +34,20 @@ require'lspconfig'.lua_ls.setup {
   }
 }
 require'lspconfig'.markdown_oxide.setup{}
+require("lspconfig")["tinymist"].setup {
+    settings = {
+        formatterMode = "typstyle",
+        exportPdf = "onType",
+        semanticTokens = "disable"
+    }
+}
+
+require'lspconfig'.clangd.setup {
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp", "objc", "objcpp" },
+  root_dir = function(fname)
+    return require'lspconfig'.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname) or
+           vim.fn.path.dirname(fname)
+  end,
+}
 
