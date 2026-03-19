@@ -9,10 +9,11 @@ call plug#begin()
 	Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' } " semantic highlight
 	Plug 'Mofiqul/adwaita.nvim' " make it look nice
 	Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'hrsh7th/cmp-nvim-lsp' " autocomplete stuff
 	Plug 'hrsh7th/cmp-buffer'
 	Plug 'hrsh7th/cmp-path'
 	Plug 'hrsh7th/cmp-cmdline'
+	Plug 'L3MON4D3/LuaSnip'
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'nvim-lualine/lualine.nvim'
 	" If you want to have icons in your statusline choose one of these
@@ -23,6 +24,9 @@ call plug#begin()
 	Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*'}
 	Plug 'LucHermitte/lh-vim-lib'
 	Plug 'LucHermitte/local_vimrc'
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'stevearc/dressing.nvim' " optional for vim.ui.select
+	Plug 'nvim-flutter/flutter-tools.nvim'
 call plug#end()
 function! TypstWatch()
     " Split the window horizontally at the bottom

@@ -1,6 +1,7 @@
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.bashls.setup{}
-require'lspconfig'.lua_ls.setup {
+vim.lsp.enable('pyright')
+vim.lsp.enable('bashls')
+vim.lsp.enable('lua_ls')
+vim.lsp.config('lua_ls', {
   on_init = function(client)
     if client.workspace_folders then
       local path = client.workspace_folders[1].name
@@ -32,22 +33,21 @@ require'lspconfig'.lua_ls.setup {
   settings = {
     Lua = {}
   }
-}
-require'lspconfig'.markdown_oxide.setup{}
-require("lspconfig")["tinymist"].setup {
+})
+vim.lsp.enable('markdown_oxide')
+vim.lsp.enable('tinymist')
+vim.lsp.config('tinymist', {
     settings = {
         formatterMode = "typstyle",
         exportPdf = "onType",
         semanticTokens = "disable"
     }
-}
+})
 
-require'lspconfig'.clangd.setup {
-  cmd = { "clangd" },
-  filetypes = { "c", "cpp", "objc", "objcpp" },
-  root_dir = function(fname)
-    return require'lspconfig'.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git")(fname) or
-           vim.fn.path.dirname(fname)
-  end,
-}
+vim.lsp.enable('clangd')
+vim.lsp.enable('flutter-tools')
+vim.lsp.config('clangd', {
+ cmd = { "clangd" },
+ filetypes = { "c", "cpp", "objc", "objcpp" },
+})
 
