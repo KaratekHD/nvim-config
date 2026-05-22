@@ -27,6 +27,9 @@ call plug#begin()
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'stevearc/dressing.nvim' " optional for vim.ui.select
 	Plug 'nvim-flutter/flutter-tools.nvim'
+	Plug 'nvim-java/nvim-java'
+	Plug 'MunifTanjim/nui.nvim'
+	Plug 'mfussenegger/nvim-dap'
 call plug#end()
 function! TypstWatch()
     " Split the window horizontally at the bottom
@@ -56,4 +59,4 @@ lua require('keymap')
 
 lua require("toggleterm").setup()
 lua require("ibl").setup()
-
+lua require('java').setup()
